@@ -1,0 +1,267 @@
+
+DELETE restaurants
+
+PUT restaurants
+
+PUT restaurants/restaurants/_mapping
+{
+	"properties" : {
+    "AggregateRating" : {
+      	"type" : "float"
+    },
+    "AverageCostForTwo" : {
+      	"type" : "float"
+		},
+		"City" : {
+     		"type" : "text",
+      		"fields" : {
+				"keyword" : {
+				"type" : "keyword", 
+				"ignore_above" : 256
+				} 
+			}
+		},
+		"Date" : {
+      		"type" : "date"
+    	},
+    "Location" : {
+      	"properties" : {
+      		"Latitude" : {
+        			"type" : "float"
+      		},
+      		"Longitude" : {
+        			"type" : "float"
+      		}
+		} 
+		},
+    	"RatingText" : {
+      		"type" : "text",
+      		"fields" : {
+				"keyword" : {
+					"type" : "keyword", 
+					"ignore_above" : 256
+				} 
+			}
+		},
+		"RestaurantID" : {
+		    "type" : "text",
+		    "fields" : {
+				"keyword" : {
+					"type" : "keyword", 
+					"ignore_above" : 256
+				} 
+			}
+		},
+		"RestaurantName" : {
+			"type" : "text",
+		    "fields" : {
+				"keyword" : {
+					"type" : "keyword", 
+					"ignore_above" : 256
+				} 
+			}
+		},
+		"Votes" : {
+		    "type" : "float"
+		},
+		"coordinates" : { 
+		    "type" : "geo_point"
+    }
+	}
+}
+
+GET restaurants/_mapping
+
+# execute the ingestion script
+
+GET restaurants/_search 
+{"query": {"match_all": {}}}
+
+
+# Find all the restaurants that contain ’hot’ in the name and have a rating from 4 to 5 (e.g. [4,5]) which are not in Abu Dhabi.
+
+GET restaurants/_search
+{
+  "query": {
+    "bool": {
+      "must": [{
+        "match": {
+          "RestaurantName": "hot"
+        }
+      },
+      {
+        "range": {
+          "AggregateRating": {
+            "gte": 4,
+            "lte": 5
+          }
+        }
+      }],
+      "must_not": {
+        "match": {
+          "City": "abu dhabi"
+        }
+      }
+    }
+  }
+}
+
+# Search all the restaurants within a 5km radius of New Deli, sorted in descending order by restaurant’s rating.
+
+GET restaurants/_search
+{ 
+  "query": {
+    "bool": {
+      "must": {
+        "match": {
+          "City": "New Deli"
+        }
+      }, 
+      "filter": {
+        "geo_distance": {
+          "distance": "5km",
+          "coordinates": {
+            "lat": 28.630296,
+            "lon": 77.210349
+          }
+        }
+      }
+    }
+  }, 
+  "sort": {
+    "AggregateRating": {
+      "order": "desc"
+    }
+  }
+}
+
+
+#Find all the records that contain in the restaurant’s name the word ’ind’. Show only the restaurant name, city and the rating text in the results and highlight the parts of restaurant’s name that contain this word.
+
+GET restaurants/_search
+{
+  "query": {
+    "wildcard": {
+      "RestaurantName": {
+        "value": "*ind*"
+      }
+    }
+  },
+  "_source": ["RestaurantName","City","RatingText"]
+  ,
+  "highlight": {
+    "fields": {"RestaurantName": {}}
+  }
+}
+
+#Find all the restaurants that contain ’delicious’ in their name. Group the results by different rating groups, e.g., [0, 3), [3,4) and [4, +inf).
+
+GET restaurants/_search
+{
+  "query": {
+    "wildcard": {
+      "RestaurantName": {
+        "value": "*delicious*"
+      }
+    }
+  },
+  "aggs": {
+    "rating groups": {
+      "range": {
+        "field": "AggregateRating",
+        "keyed" : true,
+        "ranges" : [
+          { "to" : 3 },
+          { "from" : 3, "to" : 4 }, 
+          { "from" : 4 }
+        ] 
+      }
+    }
+  },
+  "size": 0
+}
+
+# Which are the 10 cities with the highest average price per restaurant, considering only the cities with at least 10 restaurants and restaurants with at least 1000 votes.
+
+GET restaurants/_search
+{
+  "query": {
+    "range": {
+      "Votes": {
+        "gte": 1000
+      }
+    }
+  },
+  "aggs": {
+    "top_10_cities": { 
+      "terms": {
+        "field": "City.keyword",
+        "min_doc_count": 10,
+        "size": 10, 
+        "shard_size": 100,
+        "order": {
+          "costForTwo": "desc"
+        }
+      },
+      "aggs": {
+        "costForTwo": {
+          "avg": {
+            "field": "AverageCostForTwo"
+          }
+        }
+      }
+    }
+  },
+  "size": 0
+}
+
+# Show the highest number of votes for different rating types
+
+GET restaurants/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "aggs": {
+    "rating types": {
+      "terms": {
+        "field": "RatingText.keyword",
+        "size": 10,
+        "shard_size": 100,
+        "order": {
+          "highest_vote": "desc"
+        }
+      },
+      "aggs": {
+        "highest_vote": {
+          "max": {
+            "field": "Votes"
+          }
+        }
+      }
+    }
+  },
+  "size": 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

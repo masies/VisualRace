@@ -1,0 +1,11 @@
+split -l 5000 data_race race_split_
+
+for f in `ls race_split_a*` ; do sed -i '' -e 's/.*/{"index" : {}}\
+&/g' $f ; done
+
+for f in `ls race_split_a*` ; do curl -X POST http://localhost:9200/race/_bulk -H 'Content-Type: application/x-ndjson' --data-binary @$f ; done
+
+
+
+
+
