@@ -1,0 +1,383 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main should render the Main Component correctly 1`] = `
+<div
+  className="MuiContainer-root Container"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container"
+  >
+    <div
+      className="MuiGrid-root MenuContainer"
+    >
+      <h5
+        className="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+      >
+        <span
+          aria-hidden={true}
+          className="material-icons MuiIcon-root"
+        >
+          <img
+            src="logo2.png"
+          />
+        </span>
+        Visual Race
+      </h5>
+      <hr />
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Simulation
+      </h6>
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-around"
+      >
+        <button
+          className="MuiButtonBase-root-180 MuiButton-root-151 MuiButton-outlined-156 MuiButton-outlinedPrimary-157"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-152"
+          >
+            Start
+          </span>
+          <span
+            className="MuiTouchRipple-root-378"
+          />
+        </button>
+        <button
+          className="MuiButtonBase-root-212 MuiButton-root-183 MuiButton-contained-191 MuiButton-containedPrimary-192"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-184"
+          >
+            Stop
+          </span>
+          <span
+            className="MuiTouchRipple-root-388"
+          />
+        </button>
+      </div>
+      <hr
+        className="MuiDivider-root divider"
+      />
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Drivers
+      </h6>
+      <div
+        className="MuiFormGroup-root MuiFormGroup-row"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column"
+        />
+      </div>
+      <hr
+        className="MuiDivider-root divider"
+      />
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Metrics
+      </h6>
+      <div
+        className="MuiGrid-root-224 MuiGrid-container-225 MuiGrid-spacing-xs-1-247 MuiGrid-direction-xs-column-228"
+      >
+        <div
+          align="center"
+          className="MuiGrid-root-224 MuiGrid-container-225 MuiGrid-direction-xs-column-228"
+          style={
+            Object {
+              "marginBottom": "7px",
+            }
+          }
+        >
+          <button
+            className="MuiButtonBase-root-356 MuiButton-root-327 MuiButton-contained-335 MuiButton-containedPrimary-336 MuiButton-fullWidth-350"
+            disabled={false}
+            id="speed"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label-328"
+            >
+              speed
+            </span>
+            <span
+              className="MuiTouchRipple-root-398"
+            />
+          </button>
+        </div>
+        <div
+          align="center"
+          className="MuiGrid-root-224 MuiGrid-container-225 MuiGrid-direction-xs-column-228"
+          style={
+            Object {
+              "marginBottom": "7px",
+            }
+          }
+        >
+          <button
+            className="MuiButtonBase-root-356 MuiButton-root-327 MuiButton-outlined-332 MuiButton-outlinedPrimary-333 MuiButton-fullWidth-350"
+            disabled={false}
+            id="rpm"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label-328"
+            >
+              rpm
+            </span>
+            <span
+              className="MuiTouchRipple-root-398"
+            />
+          </button>
+        </div>
+        <div
+          align="center"
+          className="MuiGrid-root-224 MuiGrid-container-225 MuiGrid-direction-xs-column-228"
+          style={
+            Object {
+              "marginBottom": "7px",
+            }
+          }
+        >
+          <button
+            className="MuiButtonBase-root-356 MuiButton-root-327 MuiButton-outlined-332 MuiButton-outlinedPrimary-333 MuiButton-fullWidth-350"
+            disabled={false}
+            id="throttle"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label-328"
+            >
+              throttle
+            </span>
+            <span
+              className="MuiTouchRipple-root-398"
+            />
+          </button>
+        </div>
+        <div
+          align="center"
+          className="MuiGrid-root-224 MuiGrid-container-225 MuiGrid-direction-xs-column-228"
+          style={
+            Object {
+              "marginBottom": "7px",
+            }
+          }
+        >
+          <button
+            className="MuiButtonBase-root-356 MuiButton-root-327 MuiButton-outlined-332 MuiButton-outlinedPrimary-333 MuiButton-fullWidth-350"
+            disabled={false}
+            id="coolant"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label-328"
+            >
+              coolant
+            </span>
+            <span
+              className="MuiTouchRipple-root-398"
+            />
+          </button>
+        </div>
+      </div>
+      <hr
+        className="MuiDivider-root divider"
+      />
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Race
+      </h6>
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-direction-xs-column MuiGrid-align-items-xs-center"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item"
+        >
+          <div
+            className="MuiToggleButtonGroup-root"
+            role="group"
+          >
+            <button
+              aria-pressed={false}
+              className="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+              value="Varano"
+            >
+              <span
+                className="MuiToggleButton-label"
+              >
+                Varano
+              </span>
+              <span
+                className="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-pressed={true}
+              className="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped Mui-selected"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+              value="Nuvolari"
+            >
+              <span
+                className="MuiToggleButton-label"
+              >
+                Nuvolari
+              </span>
+              <span
+                className="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root ChartContainer MuiGrid-container"
+    >
+      <div
+        className="MuiGrid-root metricsContainer"
+      >
+        <span
+          className="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="MuiGrid-root driverMetricsContainer"
+      >
+        <span
+          className="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+          style={
+            Object {
+              "height": "90vh",
+              "width": undefined,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,7 @@
+{
+  "testRegex": "((\\.|/*.)(spec))\\.js?$",
+  "setupFiles": ["./enzyme.config.js","./jest.stub.js","./jest.setup.js","jest-canvas-mock"],
+  "moduleNameMapper": {
+    "\\.(scss|sass|css)$": "identity-obj-proxy"
+  }
+}

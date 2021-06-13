@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiveChart should render the LiveChart Component correctly 1`] = `
+<div
+  id="chart"
+>
+  <div
+    height="250"
+    options={
+      Object {
+        "chart": Object {
+          "animations": Object {
+            "dynamicAnimation": Object {
+              "enabled": true,
+              "speed": 200,
+            },
+            "easing": "linear",
+            "enabled": true,
+          },
+          "fontFamily": "Poppins, Helvetica, Arial, sans-serif",
+          "id": "Speed",
+          "toolbar": Object {
+            "show": false,
+          },
+          "zoom": Object {
+            "enabled": false,
+          },
+        },
+        "colors": Array [],
+        "legend": Object {
+          "show": true,
+        },
+        "stroke": Object {
+          "curve": "smooth",
+          "lineCap": "round",
+          "width": 2,
+        },
+        "theme": Object {
+          "mode": "light",
+          "monochrome": Object {
+            "color": "#255aee",
+            "enabled": false,
+            "shadeIntensity": 0.65,
+            "shadeTo": "light",
+          },
+          "palette": "palette5",
+        },
+        "title": Object {
+          "align": "center",
+          "text": "Speed over Time",
+        },
+        "tooltip": Object {
+          "enabled": false,
+        },
+        "xaxis": Object {
+          "convertedCatToNumeric": false,
+          "labels": Object {
+            "formatter": [Function],
+          },
+          "min": 5,
+          "range": 10,
+          "tickAmount": 5,
+          "tickPlacement": "between",
+          "title": Object {
+            "text": "Time",
+          },
+          "type": "numeric",
+        },
+        "yaxis": Object {
+          "labels": Object {
+            "formatter": [Function],
+          },
+          "max": 160,
+          "min": 0,
+          "tickAmount": 2,
+          "title": Object {
+            "text": "Speed",
+          },
+        },
+      }
+    }
+    series={Array []}
+    type="line"
+    width="100%"
+  />
+</div>
+`;

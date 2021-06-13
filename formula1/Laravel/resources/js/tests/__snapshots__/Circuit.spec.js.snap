@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Circuit should render the Circuit Component correctly 1`] = `
+<div
+  id="map"
+  style={
+    Object {
+      "height": "300px",
+      "width": "100%",
+    }
+  }
+/>
+`;
